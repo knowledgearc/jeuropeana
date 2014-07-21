@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.2" client="site" method="upgrade">
+    <name>mod_jeuropeana</name>
+    <creationDate>2014-07-20</creationDate>
+    <author>KnowledgeArc</author>
+    <authorEmail>development@knowledgearc.com</authorEmail>
+    <authorUrl>http://www.knowledgearc.org</authorUrl>
+    <copyright>>Copyright (C) 2014 KnowledgeArc Ltd. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.html</license>
+    <version>0.1.0</version>
+    <description>MOD_JEUROPEANA_XML_DESCRIPTION</description>
+    <files>
+        <filename module="mod_jeuropeana">mod_jeuropeana.php</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+    </files>
+
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.mod_jeuropeana.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.mod_jeuropeana.sys.ini</language>
+    </languages>
+        
+    <config>
+    </config>
+</extension>

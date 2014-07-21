@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="JEuropeana Module" default="" basedir=".">
+    <property name="dest.modules.module" value="${dest.modules}/mod_jeuropeana"/>
+    <property name="dest.media.module" value="${dest.media}/mod_jeuropeana"/>
+    
+    <target name="update" description="Copies JEuropeana module to existing Joomla install.">
+        <echo message="Deploying JEuropeana module to Joomla! environment."/>
+        <copy todir="${dest.modules.module}">
+            <fileset dir="${src}" defaultexcludes="true">
+                <include name="**"/>
+                <exclude name="**/language/**"/>
+            </fileset>
+        </copy>
+        <copy todir="${dest.languages}">
+            <fileset dir="${src}/language" defaultexcludes="true">
+                <include name="**/**"/>
+            </fileset>
+        </copy>     
+        <copy todir="${dest.media.module}">
+            <fileset dir="${src}" defaultexcludes="true">
+            </fileset>
+        </copy>
+    </target>
+    
+    <target name="package" description="Creates a JEuropeana module package.">
+        <echo message="Packaging JEuropeana module."/>
+        <zip destfile="${package.dest}/mod_jeuropeana.zip"
+               basedir="${src}"
+               update="true"
+               excludes="build*.xml"/>
+    </target>
+</project>
